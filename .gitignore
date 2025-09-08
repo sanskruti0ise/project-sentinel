@@ -25,6 +25,8 @@ wheels/
 *.egg
 MANIFEST
 
+#kaggle api
+kaggle.json
 # Virtual Environments
 .venv/
 venv/

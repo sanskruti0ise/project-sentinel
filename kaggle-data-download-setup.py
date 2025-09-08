@@ -20,12 +20,12 @@ def check_kaggle_credentials():
     if not KAGGLE_JSON_FILE.exists():
         print("="*80)
         print("ERROR: Kaggle API credentials not found.")
-        print(f"Please place your 'kaggle.json' file in the project root directory:")
+        print("Please place your 'kaggle.json' file in the project root directory:")
         print(f"-> {PROJECT_ROOT}")
         print("\nInstructions:")
         print("1. Go to your Kaggle account settings: https://www.kaggle.com/account")
         print("2. Click on 'Create New API Token' to download 'kaggle.json'.")
-        print(f"3. Move that file into your project folder.")
+        print("3. Move that file into your project folder.")
         print("="*80)
         sys.exit(1)
 
@@ -50,7 +50,7 @@ def download_and_unzip_dataset():
     DATA_DIR.mkdir(exist_ok=True)
     
     if (DATA_DIR / "creditcard.csv").exists():
-        print(f"'creditcard.csv' already exists in the data directory. Skipping download.")
+        print("'creditcard.csv' already exists in the data directory. Skipping download.")
         return
 
     print(f"Downloading dataset '{DATASET_NAME}' from Kaggle...")

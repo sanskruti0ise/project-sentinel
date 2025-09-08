@@ -1,7 +1,5 @@
 import streamlit as st
 import requests
-import json
-import numpy as np
 
 # --- Page Configuration ---
 st.set_page_config(
@@ -54,7 +52,7 @@ with col1:
 with col2:
     st.number_input("Transaction Amount ($)", key="amount", min_value=0.0, step=10.0, format="%.2f")
 
-st.info(f"ℹ️ The 28 anonymized 'V' features are loaded from the examples below.")
+st.info("ℹ️ The 28 anonymized 'V' features are loaded from the examples below.")
 
 
 # Use columns for buttons to load examples

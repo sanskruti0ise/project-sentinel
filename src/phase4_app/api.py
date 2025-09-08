@@ -36,7 +36,7 @@ async def assess_transaction(request: TransactionRequest):
     Receives transaction details and returns the final risk assessment
     from the LangGraph workflow.
     """
-    print(f"Received request for transaction...")
+    print("Received request for transaction...")
     inputs = {"transaction_details": request.transaction_details}
     
     # Invoke the LangGraph workflow

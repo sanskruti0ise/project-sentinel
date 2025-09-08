@@ -6,6 +6,12 @@ on:
   pull_request:
     branches: [ "master" ]
 
+# <-- ADD THIS PERMISSIONS BLOCK
+permissions:
+  contents: read
+  packages: write
+# --- END OF NEW BLOCK ---
+
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
@@ -24,13 +30,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Test with simple API health check (placeholder)
+    - name: Lint with ruff
       run: |
-        # This is a placeholder for actual tests.
-        # For a real project, you would run pytest here.
-        echo "Tests would run here. For now, we'll just check if the app starts."
-        # We can't start a server in CI easily without more setup,
-        # so this step is illustrative. A linter would be a good real-world test.
         pip install ruff
         ruff check .
 
@@ -55,7 +56,6 @@ jobs:
         with:
           context: .
           push: true
-          # Example tag: ghcr.io/YOUR_GITHUB_USERNAME/project-sentinel:latest
           tags: ghcr.io/${{ github.repository }}:${{ github.sha }}
           labels: |
             org.opencontainers.image.source=${{ github.repositoryUrl }}

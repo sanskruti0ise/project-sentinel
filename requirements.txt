@@ -18,3 +18,8 @@ python-dotenv==1.0.1
 langchainhub==0.1.20
 langchain-google-genai==1.0.6
 
+#langraph phase3
+langgraph==0.1.1 # <-- ADD THIS
+
+#For running the graph in a notebook (optional but good practice)
+ipywidgets

@@ -27,7 +27,7 @@ echo "Dependencies are up to date."
 
 echo "Running the risk assessment graph..."
 # Execute the main graph script
-python src/phase3_graph/risk_assessment_graph.py
+python src/phase3_graph/risk_assessment_graph_standalone.py
 
 echo -e "\n--- Phase 3 Execution Successful! ---"
 

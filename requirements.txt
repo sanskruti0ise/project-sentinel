@@ -23,3 +23,9 @@ langgraph==0.1.1 # <-- ADD THIS
 
 #For running the graph in a notebook (optional but good practice)
 ipywidgets
+
+#Phase 4: API & Frontend
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+streamlit==1.36.0
+requests==2.32.3
